@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import NavBar from './components/NavigationBar/NavigationBar';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+	  <div className="App">
+	  <NavBar/>
       <header className="App-header">
-		<NavBar/>
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
