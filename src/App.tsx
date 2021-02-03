@@ -2,15 +2,43 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import NavBar from './components/NavigationBar/NavigationBar';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link, Switch, Route } from 'react-router-dom';
+import About from './containers/About/About';
 
 function App() {
   return (
 	  <div className="App">
-	  <NavBar/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <NavBar/>
+      <img src={logo} className="App-logo" alt="logo" />
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/topics">Topics</Link>
+          </li>
+        </ul>
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/topics">
+
+          </Route>
+          <Route path="/">
+
+          </Route>
+        </Switch>
+      </div>
+      {/* <header className="App-header">
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -53,7 +81,7 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
+      </header> */}
     </div>
   );
 }
