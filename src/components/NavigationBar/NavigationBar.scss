@@ -1,1 +1,5 @@
-.NavigationBar {}
+.NavigationBar {
+    & .navbar {
+        color: red;
+    }
+}
