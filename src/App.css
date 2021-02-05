@@ -13,6 +13,14 @@
   }
 }
 
+/* .app-side-menu{
+  width: 18%;
+}
+
+.app-body{
+  width: 82%;
+} */
+
 .App-header {
   min-height: 100vh;
   display: flex;

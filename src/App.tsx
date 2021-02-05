@@ -14,21 +14,25 @@ function App() {
   return (
 	  <div className="App">
       <NavBar/>
-      <SideMenu />
-      <div className="app-body">
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/topics">
+      <div className="row">
+        <div className="col">
+          <SideMenu />
+        </div>
+        <div className="col-9">
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/topics">
 
-          </Route>
-          <Route path="/">
+            </Route>
+            <Route path="/">
 
 
-            <VideoPlayer/>
-          </Route>
-        </Switch>
+              <VideoPlayer/>
+            </Route>
+          </Switch>
+        </div>
       </div>
       {/* <header className="App-header">
         <Counter />
