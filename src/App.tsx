@@ -1,31 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Link, Switch, Route } from 'react-router-dom';
+
 import NavBar from './components/NavigationBar/NavigationBar';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+
+import About from './containers/About/About';
+import SideMenu from './containers/SideMenu/SideMenu';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, Switch, Route } from 'react-router-dom';
-import About from './containers/About/About';
 
 function App() {
   return (
 	  <div className="App">
       <NavBar/>
-      <img src={logo} className="App-logo" alt="logo" />
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-        </ul>
-
+      <SideMenu />
+      <div className="app-body">
         <Switch>
           <Route path="/about">
             <About />
@@ -35,6 +25,8 @@ function App() {
           </Route>
           <Route path="/">
 
+
+            <VideoPlayer/>
           </Route>
         </Switch>
       </div>
